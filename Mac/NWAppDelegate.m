@@ -36,6 +36,8 @@
     [self loadCertificatesFromKeychain];
     [self loadConfiguration];
     
+    NSLog(@"dict [%@]",_configuration);
+    
     NSString *payload = [_configuration valueForKey:@"payload"];
     _payloadField.string = payload.length ? payload : @"";
     _payloadField.font = [NSFont fontWithName:@"Courier" size:10];
